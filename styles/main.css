@@ -1,4 +1,5 @@
 :root {
+  --header-footer-color: #000;
   --background-color: #242526;
   --font-color: #fff;
   --highlight-color: orange;
@@ -26,6 +27,9 @@ body {
   background-color: var(--background-color);
   font-family: "Roboto Mono", monospace;
   color: var(--font-color);
+}
+header {
+  background-color: var(--header-footer-color);
 }
 
 nav {
@@ -87,6 +91,7 @@ img {
   grid-column: 1/4;
   grid-row: 1/4;
   width: 100%; /* simple hack to preserve normal 'width' of the image in figure element */
+  height: 100%;
 }
 
 a {
@@ -177,6 +182,7 @@ figcaption {
   flex-flow: row wrap;
   justify-content: center;
   gap: 2rem;
+  padding: 3rem;
 }
 
 .contact-icons > span,
@@ -184,6 +190,18 @@ figcaption {
   font-size: 5rem;
   cursor: pointer;
 }
+
+.footer {
+  min-width: 100%;
+  background-color: var(--header-footer-color);
+}
+
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -214,6 +232,8 @@ figcaption {
 
 @media (max-width: 600px) {
   .projects-container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
   }
 }

@@ -171,6 +171,19 @@ figcaption {
   display: flex;
   align-items: center;
 }
+
+.contact-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-icons > span,
+.contact-icons > i {
+  font-size: 5rem;
+  cursor: pointer;
+}
 @keyframes typing {
   from {
     width: 0;

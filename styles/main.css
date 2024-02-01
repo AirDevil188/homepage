@@ -1,6 +1,7 @@
 :root {
   --background-color: #242526;
   --font-color: #fff;
+  --highlight-color: orange;
 }
 
 html {
@@ -51,7 +52,20 @@ section {
 
 main {
   display: flex;
-  justify-content: center;
+  flex-flow: column wrap;
+  align-content: center;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--highlight-color);
+}
+span {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
 .logo {
@@ -76,7 +90,7 @@ main {
   color: var(--font-color);
   font-size: 5rem;
   overflow: hidden;
-  border-right: 0.1em solid orange;
+  border-right: 0.1em solid var(--highlight-color);
   letter-spacing: 0.15em;
   white-space: nowrap;
   text-transform: uppercase;
@@ -92,19 +106,17 @@ main {
   animation-fill-mode: forwards;
 }
 
-.about-title > h3 {
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: 400;
-}
-.about-title > span {
-  display: inline-block;
-  font-size: 1.2rem;
+.about-text {
   font-weight: 100;
 }
 
-.about-text {
-  font-weight: 100;
+.skills .skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  grid-gap: 10px;
+  font-size: 10em;
+  max-height: 0;
 }
 
 @keyframes typing {
@@ -122,7 +134,7 @@ main {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: var(--highlight-color);
   }
 }
 

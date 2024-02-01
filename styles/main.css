@@ -110,13 +110,16 @@ span {
   font-weight: 100;
 }
 
-.skills .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  justify-items: center;
-  grid-gap: 10px;
-  font-size: 10em;
-  max-height: 0;
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 15px;
+  font-size: 12rem;
+}
+
+.skill {
+  flex-basis: 10%;
 }
 
 @keyframes typing {

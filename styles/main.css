@@ -112,6 +112,17 @@ figcaption {
   grid-row: 3/4;
 }
 
+input {
+  min-height: 45px;
+  background-color: transparent;
+  border: 1px solid var(--highlight-color);
+}
+
+textarea {
+  background-color: transparent;
+  border: 1px solid var(--highlight-color);
+}
+
 .logo {
   max-width: 120px;
   height: auto;
@@ -179,6 +190,35 @@ figcaption {
   border: 5px solid var(--highlight-color);
 }
 
+.form-container {
+  border: 3px solid var(--highlight-color);
+}
+
+.form-container {
+  display: flex;
+}
+.form-container > form {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  flex-basis: 100%;
+  gap: 1rem;
+}
+
+.form-button {
+  background-color: transparent;
+  border: 1px solid var(--highlight-color);
+  color: var(--font-color);
+  text-transform: uppercase;
+  min-width: 25ch;
+  min-height: 6ch;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: var(--highlight-color);
+  color: #000;
+}
 .icon-container {
   font-size: 1.5rem;
   gap: 1rem;
@@ -248,7 +288,6 @@ figcaption {
 
   .heading-text-container > h1 {
     font-size: 2.2rem;
-    padding: 0.5rem;
   }
 
   nav {
@@ -256,5 +295,23 @@ figcaption {
   }
   nav > ul {
     flex-flow: column wrap;
+  }
+
+  .form-container {
+    padding: 0;
+  }
+
+  textarea {
+    max-width: 200px;
+  }
+
+  @media (max-width: 350px) {
+    .card {
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    figcaption {
+      grid-row: 2/3;
+    }
   }
 }

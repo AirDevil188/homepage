@@ -8,6 +8,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -37,6 +38,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: var(--font-color);
+  transition: top 0.3s;
 }
 
 nav > ul {
@@ -53,6 +55,10 @@ ul {
 li {
   list-style: none;
   padding: 0.5rem;
+}
+
+li > a:hover {
+  color: var(--highlight-color);
 }
 
 section {
@@ -79,10 +85,6 @@ span {
 }
 
 figure {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  border: 3px solid var(--highlight-color);
   margin: 0;
   padding: 0;
 }
@@ -90,7 +92,7 @@ figure {
 img {
   grid-column: 1/4;
   grid-row: 1/4;
-  width: 100%; /* simple hack to preserve normal 'width' of the image in figure element */
+  width: 100%; /* simple "hack" to preserve normal 'width' of the image in figure element */
   height: 100%;
 }
 
@@ -168,6 +170,13 @@ figcaption {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  border: 5px solid var(--highlight-color);
 }
 
 .icon-container {

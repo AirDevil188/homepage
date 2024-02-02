@@ -2,7 +2,7 @@
   --header-footer-color: #000;
   --background-color: #242526;
   --font-color: #fff;
-  --highlight-color: orange;
+  --highlight-color: #ff9a14;
   --fig-caption-color: #001219;
 }
 
@@ -98,6 +98,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--font-color);
 }
 
 a:visited {
